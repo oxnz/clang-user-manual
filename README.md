@@ -11,10 +11,11 @@ clang 中文用户手册
 Date | Description
 -----| -----------
 2013-4-30 | Init commit
-2013-10-5 | zh_CN Version finished translated, not reviewed
+2013-10-5 | zh\_CN Version finished translated, not reviewed
+2013-10-10 | update new content in clang 3.4 manual
 
 ##TODO
-* Add zh_TW & zh_HK version
+* Add zh\_TW & zh\_HK version
 * review translation
 
 ##Copyright

@@ -25,8 +25,8 @@
 		* 格式化诊断信息
 		* 单独警告组
 	* 控制Clang崩溃诊断选项
-* 语言和目标独立的特性
-	* 控制错误和警告
+* 语言和目标无关的特性(Language and Target-independent Features)
+	* 错误和警告控制
 		* 控制Clang如何显示诊断信息
 		* 诊断映射
 		* 诊断分类
@@ -63,6 +63,9 @@
 			* Cygwin
 			* MinGW32
 			* MinGW-w64
+* clang-cl
+	* 命令行选项
+		* /fallback 选项
 
 #介绍
 
@@ -819,3 +822,84 @@ Clang在一些mingw32发布上工作。Clang假定的目录如下：
 Clang预期PATH中为i686-w64-mingw32(或者x86_64-w64-mingw32)编译的GCC可执行文件"gcc.exe"
 
 在x86_64-w64-mingw32上，一些测试可能会失败。
+
+# clang-cl
+
+clang-cl 是一个Clang驱动器的另一个命令行接口的选择，被设计用来兼容Visual C++ 的编译器，cl.exe。
+
+为了使clang-cl从命令行运行的时候能够找到系统头文件，库和连接器，它应当在一个Visual Studio 本地工具命令提示符或者设置了环境变量常规的命令提示符，例如vcvars32.bat
+
+clang-cl 也可以在Visual Studio中使用，通过使用LLVM平台工具集。
+
+## 命令行选项
+
+为了兼容cl.exe，clang-cl 支持大多数相同的命令行选项。这些选项可以使用`/`或者`-`开始。它也支持一些Clang的核心选项，例如｀-w｀选项。
+
+clang-cl识别的选项，但是目前还没有被支持的，会被忽略并显示一个警告。例如：
+
+	clang-cl.exe: warning: argument unused during compilation: '/Zi'
+
+可以使用`-Qunused-arguments`选项来关闭为使用的参数警告。
+
+clang-cl不认识的选项将会引发错误。如果它们被冠以`/`，它们将会被误认为是一个文件名：
+
+	clang-cl.exe: error: no such file or directory: '/foobar'
+
+如果有发现cl.exe有的，clang-cl却不理解的命令，请提交一个bug。
+
+执行`clang-cl /?`来查看支持的选项列表：
+
+```
+/?                     | Display available options
+/c                     | Compile only
+/D <macro[=value]>     Define macro
+/fallback              Fall back to cl.exe if clang-cl fails to compile
+/Fe<file or directory> Set output executable file or directory (ends in / or \)
+/FI<value>             Include file before parsing
+/Fo<file or directory> Set output object file, or directory (ends in / or \)
+/GF-                   Disable string pooling
+/GR-                   Disable RTTI
+/GR                    Enable RTTI
+/help                  Display available options
+/I <dir>               Add directory to include search path
+/J                     Make char type unsigned
+/LDd                   Create debug DLL
+/LD                    Create DLL
+/link <options>        Forward options to the linker
+/MDd                   Use DLL debug run-time
+/MD                    Use DLL run-time
+/MTd                   Use static debug run-time
+/MT                    Use static run-time
+/Ob0                   Disable inlining
+/Od                    Disable optimization
+/Oi-                   Disable use of builtin functions
+/Oi                    Enable use of builtin functions
+/Os                    Optimize for size
+/Ot                    Optimize for speed
+/Ox                    Maximum optimization
+/Oy-                   Disable frame pointer omission
+/Oy                    Enable frame pointer omission
+/O<n>                  Optimization level
+/P                     Only run the preprocessor
+/showIncludes          Print info about included files to stderr
+/TC                    Treat all source files as C
+/Tc <filename>         Specify a C source file
+/TP                    Treat all source files as C++
+/Tp <filename>         Specify a C++ source file
+/U <macro>             Undefine macro
+/W0                    Disable all warnings
+/W1                    Enable -Wall
+/W2                    Enable -Wall
+/W3                    Enable -Wall
+/W4                    Enable -Wall
+/Wall                  Enable -Wall
+/WX-                   Do not treat warnings as errors
+/WX                    Treat warnings as errors
+/w                     Disable all warnings
+/Zs                    Syntax-check only
+```
+### /fallback 选项
+
+当clang-cl带有/fallback选项运行的时候，它首先会尝试编译文件自身。对于它编译失败的文件，它将会回退并调用cl.exe来编译。
+
+这个选项意在被临时用作一种方式来编译项目，当clang-cl不能成功编译所有文件的时候。clang-cl编译一个文件失败或者可能是引文它无法为一些C++特性产生代码，或者因为它无法解析一些Microsoft语言扩展。

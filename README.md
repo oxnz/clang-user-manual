@@ -19,7 +19,7 @@ Date | Description
 * review translation
 
 ##Copyright
-Copyright &copy; 2013 0xnz <yunxinyi AT gmail DOT com>, All rights reserved.
+Copyright &copy; 2013-2014 0xnz <yunxinyi AT gmail DOT com>, All rights reserved.
 
 英文版本著作权归于llvm.org及其组织所有，中文翻译版归本人所有。
 

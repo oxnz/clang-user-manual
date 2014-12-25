@@ -100,4 +100,5 @@ Clang 诊断子系统是编译器和人交互的一个重要部分。诊断是�
 	"overloaded '%0' must be a %select{unary|binary|unary 	or binary}2 operator"
     	 " (has %1 parameter%s1)"
 
-这些例子
+这些例子展示了格式化字符串的某些重要性。你可以使用普通的 ASCII 字符串，除了`%`，但是这些事 C 字符串，所以你要像上边第二个例子一样使用并且小心 escape sequences。如果你想生成一个`%`，使用`%%`escape sequence，像上例中第三个一样。最终，Clang 使用`%...[digit]`序列来指定诊断参数的位置和如何格式化。
+

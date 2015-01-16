@@ -1,6 +1,19 @@
 #Frequently Asked Questions (FAQ)
 
-* License
-	* Does the University of Illinois Open Source License really qualify as an “open source” license?
-	* Can I modify LLVM source code and redistribute the modified source?
-	* Can I modify the LLVM source code and redistribute binaries or other tools based on it, without redistributing the source?
+* 许可协议
+	* Illinois 大学的开源协议是一个真正的开源协议吗？
+	* 我可以修改LLVM 源代码并发布修改后的代码吗？
+	* 我可以修改LLVM源代码并发布二进制或者其他基于此的工具，需要包含源代码吗？
+
+# 许可协议
+## Illinois 大学的开源协议是一个真正的开源协议吗？
+
+是的，其协议被Open Source Initiative (OSI)所认可。
+
+## 我可以修改LLVM 源代码并发布修改后的代码吗？
+
+可以。修改后的源代码必须保留版权提示和LLVM协议中的三条。
+
+## 我可以修改LLVM源代码并发布二进制或者其他基于此的工具，需要包含源代码吗？
+
+可以。

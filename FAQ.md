@@ -34,7 +34,7 @@ LLVM源代码可以移植到大多数现代的类Unix系统上。大多数代码
 
 一些移植问题任然可能存在于以下方面:
 
-	* automake/makefile 编译系统严重依赖UNIX shell 工具，例如Bourne shell和sed。移植到没有这些工具的系统（例如MacOS9， plan 9）将需要更多努力。
+* automake/makefile 编译系统严重依赖UNIX shell 工具，例如Bourne shell和sed。移植到没有这些工具的系统（例如MacOS9， plan 9）将需要更多努力。
 
 ## 应该用什么样的API去存储一个虚拟寄存器LLVM IR SSA？
 

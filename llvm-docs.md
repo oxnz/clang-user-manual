@@ -40,6 +40,20 @@ LLVM 编译器架构支持的工程范围广阔，从工业强度的编译器到
 * [使用 CMake 编译 LLVM](./Building-LLVM-with-CMake.md)
 * [在 ARM 上编译](./How-To-Build-On_ARM.md)
 * [如何使用 Clang/LLVM 交叉编译 Clang/LLVM](How-To-Cross-Compile-Clang_LLVM-using-Clang/LLVM.md)
+* [结合Microsoft Visual Studio使用LLVM 系统](Getting-Started-with-the-LLVM-System-using-Microsoft-Visual-Studio.md)
+* [LLVM教程目录](LLVM-tutorial.md)
+* [LLVM 命令指南](LLVM-command-guide.md)
+* [LLVM分析和变换循环](LLVM’s-Analysis-and-Transform-Passes.md)
+* [常见问题解答](FAQ.md)
+* [当前版本的发行信息](Release-notes-for-the-current-release.md)
+* [如何提交bug报告](howto-bug-report.md)
+* [Sphinx模板](Sphinx-quickstart-template.md)
+* [LLVM测试架构指南](LLVM-Testing-Infrastructure-Guide.md)
+* [如何编译C,C++,ObjC,ObjC++前端](build-c-family-frontend.md)
+* [LLVM词典](llvm-lexicon.md)
+* [如何添加你的编译配置到LLVM Buildbot架构](Add-personal-conf-to-llvm-buildbot.md)
+* [YAML I/O](yaml-io.md)
+* [容易误解的GEP指令](GEP.md)
 
 #编程文档
 #子系统文档

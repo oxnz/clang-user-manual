@@ -1,8 +1,6 @@
 llvm 官方文档翻译
 =================
 
-llvm 官方文档翻译
-
 ##项目简介
 
 项目起初是clang 中文用户手册的翻译，但是由于对于编译原理的兴趣，所以又增加了llvm文档的翻译计划，具体文件参考项目进度部分。
@@ -38,16 +36,21 @@ llvm 官方文档翻译
 
 | 时间 | 变更文档 | 变更描述 |
 |-----| ----------| -------- |
-|2013-4-30 | DragonFull.png,DragonMedium.png,DragonSmall.png,README.md | 创建项目 |
-|2013-10-5 | clang-user-manual.md | 添加中文版本 |
+|2013-04-30 | DragonFull.png,DragonMedium.png,DragonSmall.png,README.md | 创建项目 |
+|2013-10-05 | clang-user-manual.md | 添加中文版本 |
 |2013-10-10| clang-user-manual.md | 校对 |
-|2014-2-20| clang-user-manual.md | 更新到 clang 3.4 |
-|2014-5-10| Advice\_on\_Packaging_LLVM.md, llvm-lexicon.md, llvm-docs.md | 添加新文件 |
+|2014-02-20| clang-user-manual.md | 更新到 clang 3.4 |
+|2014-05-10| Advice\_on\_Packaging_LLVM.md, llvm-lexicon.md, llvm-docs.md | 添加新文件 |
+|2015-03-09| compiler-craft | 添加示例代码组织和项目，以实践更加清晰的阐释了文章所载的理论 |
+
+##近期更新
+
+* 添加示例代码组织 [compiler-craft](https://github.com/compiler-craft)
+* 添加示例代码项目 [compiler-craft](https://github.com/compiler-craft/compiler-craft)
 
 ##近期规划
 * 继续翻译 LLVM 语言参考手册
 * 对已经翻译的文档进行校对
-* 添加一些示例代码
 
 ##版权声明
 

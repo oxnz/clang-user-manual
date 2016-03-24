@@ -54,7 +54,7 @@ llvm 官方文档翻译
 
 ##版权声明
 
-Copyright &copy; 2013-2015 0xnz <yunxinyi AT gmail DOT com>, All rights reserved.
+Copyright &copy; 2013-2016 0xnz <yunxinyi AT gmail DOT com>, All rights reserved.
 
 英文版本著作权归于llvm.org及其组织所有，中文翻译版归本人所有。
 

@@ -10,8 +10,8 @@
 
 <center><table>
 <tr><th>作者</th><th>张盼</th></tr>
-<tr><th>日期</th><th>2013-04-19</th></tr>
-<tr><th>版本</th><th>1.01</th></tr>
+<tr><th>日期</th><th>2016-03-24</th></tr>
+<tr><th>版本</th><th>1.02</th></tr>
 </table></center>
 <br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br />

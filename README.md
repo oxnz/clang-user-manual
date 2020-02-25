@@ -1,11 +1,11 @@
 llvm 官方文档翻译
 =================
 
-##项目简介
+## 项目简介
 
 项目包括了clang 中文用户手册和llvm文档，旨在帮助对编译原理有兴趣的同学对编译器的运行乃至构造有一个更深层次的理解，另外为了这一目的，新增加了示例代码项目[compiler-craft](https://github.com/compiler-craft/compiler-craft)，其中包含了很多代码片段和小的工程示范。
 
-##文档目录
+## 文档目录
 
   * [概览](./llvm-docs.md)
   * [LLVM 打包建议](./Advice_on_Packaging_LLVM.md)
@@ -16,7 +16,7 @@ llvm 官方文档翻译
   * [LLVM 语言参考手册](./LLVM-Language-Reference-Manual.md)
   * [llvm 词典](./llvm-lexicon.md)
 
-##项目进度
+## 项目进度
 
 | 文档名 | 文件名 | 进度 |
 | ------ | ------ | ---- |
@@ -43,18 +43,18 @@ llvm 官方文档翻译
 |2014-05-10| Advice\_on\_Packaging_LLVM.md, llvm-lexicon.md, llvm-docs.md | 添加新文件 |
 |2015-03-09| compiler-craft | 添加示例代码组织和项目，以实践更加清晰的阐释了文章所载的理论 |
 
-##近期更新
+## 近期更新
 
 * 添加示例代码组织 [compiler-craft](https://github.com/compiler-craft)
 * 添加示例代码项目 [compiler-craft](https://github.com/compiler-craft/compiler-craft)
 
-##近期规划
+## 近期规划
 * 继续翻译 LLVM 语言参考手册
 * 对已经翻译的文档进行校对
 
-##版权声明
+## 版权声明
 
-Copyright &copy; 2013-2016 0xnz <yunxinyi AT gmail DOT com>, All rights reserved.
+Copyright &copy; 2013-2020 0xnz <yunxinyi AT gmail DOT com>, All rights reserved.
 
 英文版本著作权归于llvm.org及其组织所有，中文翻译版归本人所有。
 
